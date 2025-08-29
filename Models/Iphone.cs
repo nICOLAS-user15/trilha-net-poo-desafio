@@ -6,7 +6,6 @@ namespace DesafioPOO.Models
     {
         public Iphone(string numero) : base(numero)
         {
-
         }
 
         public override void InstalarAplicativo(string nomeApp)

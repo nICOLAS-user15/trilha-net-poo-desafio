@@ -4,15 +4,23 @@ namespace DesafioPOO.Models
     {
         public string Numero { get; set; }
         // TODO: Implementar as propriedades faltantes de acordo com o diagrama (falta proteger as propriedades Modelo, IMEI e Memoria com o protected)
-        public string Modelo { get; set; }
-        public string IMEI { get; set; }
-        public int Memoria { get; set; }
+        protected string Modelo { get; set; }
+        protected string IMEI { get; set; }
+        protected int Memoria { get; set; }
 
+        //Métodos públicos para acesso externo
+        public string GetModelo() => Modelo;
+        public void SetModelo(string modelo) => Modelo = modelo;
+
+        public string GetIMEI() => IMEI;
+        public void SetIMEI(string imei) => IMEI = imei;
+
+        public int GetMemoria() => Memoria;
+        public void SetMemoria(int memoria) => Memoria = memoria;   
 
         public Smartphone(string numero)
         {
             Numero = numero;
-            //OK TODO: Passar os parâmetros do construtor para as propriedades
             Modelo = "";
             IMEI = "";
             Memoria = 0;
